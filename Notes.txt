@@ -1,2 +1,4 @@
 Naive Bayes.
 
+http://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes-classification
+
