@@ -4,3 +4,5 @@ http://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes-
 
 interesting text classifier if we want to expand
 http://textblob.readthedocs.org/en/latest/classifiers.html
+
+https://www.youtube.com/watch?v=iA2nEXanP_o
