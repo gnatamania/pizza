@@ -1,3 +1,4 @@
 [date][user]: Write what's happened
+2015-03-10 fgn: See 'git log'.
 2015-03-+4 gnatamania: Reading up on Naive Bayes and added some links
 2015-02-28 gnatamania: Added logbook
