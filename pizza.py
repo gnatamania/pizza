@@ -34,3 +34,23 @@ top_words = 500
 pizza_l_mcommon = pizza_l_freqlst.most_common()[:top_words]
 pizza_w_mcommon = pizza_w_freqlst.most_common()[:top_words]
 
+# P(pizza) och P(~pizza)
+
+p_pizza = 0;
+p_not_pizza = 0;
+
+for x in range(len(data)):
+  if data[x]["requester_received_pizza"]:
+    p_pizza = p_pizza + 1
+
+p_not_pizza = len(data) - p_pizza;
+
+p_pizza = p_pizza/float(len(data))
+p_not_pizza = 1.0 - p_pizza
+
+
+# P(w_i | pizza) = pizza_w_lower.count(w_i)
+
+# P(pizza | w1, w2, w3, ..., w_n) = P(pizza)*P(w1|pizza)*P(w2|pizza)*...*P(w_n|pizza)/Z
+
+all_words = pizza_l_lower + pizza_w_lower
