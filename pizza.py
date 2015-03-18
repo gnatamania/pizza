@@ -31,8 +31,10 @@ pizza_w_freqlst = Counter(pizza_w_lower)
 
 # Top 500 words.
 top_words = 500
-pizza_l_mcommon = pizza_l_freqlst.most_common()[:top_words]
-pizza_w_mcommon = pizza_w_freqlst.most_common()[:top_words]
+pizza_l_mcommon = dict(pizza_l_freqlst.most_common())
+pizza_w_mcommon = dict(pizza_w_freqlst.most_common())
+
+pizza_l_mcommon['i']
 
 # P(pizza) och P(~pizza)
 
@@ -49,8 +51,20 @@ p_pizza = p_pizza/float(len(data))
 p_not_pizza = 1.0 - p_pizza
 
 
+test = [tuple(str(x) for x in xs) for xs in pizza_l_lower]
+
 # P(w_i | pizza) = pizza_w_lower.count(w_i)
 
 # P(pizza | w1, w2, w3, ..., w_n) = P(pizza)*P(w1|pizza)*P(w2|pizza)*...*P(w_n|pizza)/Z
 
 all_words = pizza_l_lower + pizza_w_lower
+all_words=list(set(all_words))
+
+def counter(word, received_pizza):  
+  if received_pizza:
+    return pizza_w_mcommon[word]
+  else:
+    return pizza_l_mcommon[word]
+  
+
+len(pizza_w)
